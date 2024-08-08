@@ -1,0 +1,176 @@
+/* Estilos generales */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background: #F3F5FC;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+body {
+    width: 100%;
+}
+
+footer{
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+    text-align: center;
+    
+}
+
+.logo {
+    margin: 10px;
+    max-width: 100%; /* Asegura que el logo no se desborde */
+}
+
+textarea{
+    font-size: 32px;
+}
+
+/* Diseño principal */
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+    width: 100%;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+    padding: 0 20px; /* Añade espacio en los lados */
+}
+
+#texto-a-encriptar{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+#respuesta{
+    width: 30%;
+}
+
+/* Estilos para el área de texto */
+.textarea-a-encriptar {
+    border: none;
+    color: #0A3871;
+    text-transform: lowercase;
+    height: 60vh;
+    width: 100%; /* Asegura que el área de texto se ajuste al contenedor */
+    margin-left: 15%;
+    box-sizing: border-box;
+}
+
+::placeholder {
+    color: #0A3871;
+}
+
+:focus {
+    outline: none;
+}
+
+.info {
+    color: #495057;
+    font-size: 1rem; /* Usa unidades relativas para adaptarse mejor */
+    text-align: center;
+}
+
+/* Estilos para el área de respuesta */
+#respuesta {
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.mensaje {
+    outline: none;
+    background: #ffffff;
+    border: none;
+    border-radius: 24px;
+    color: #0A3871;
+    padding-left: 20px;
+    height: 60vh;
+    width: 100%; /* Asegura que el área de texto se ajuste al contenedor */
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Estilos para los botones */
+.btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px; /* Añade espacio en la parte superior */
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 24px;
+    color: #ffffff;
+    cursor: pointer;
+    height: 67px;
+    width: 100%; /* Botones ocupan el ancho completo de su contenedor */
+    max-width: 200px; /* Ancho máximo para pantallas grandes */
+    margin: 5px;
+    box-sizing: border-box;
+}
+
+.btn-encriptar {
+    background-color: #0A3871;
+    border: 1px solid #0A3871;
+}
+
+.btn-desencriptar {
+    background: #d8dfe8;
+    border: 1px solid #0A3871;
+    color: #0A3871;
+}
+
+.copiar {
+    border: 1px solid #0A3871;
+    color: #0A3871;
+}
+
+/* Media Queries para hacer la página responsive */
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column; /* En pantallas más pequeñas, apila las secciones verticalmente */
+    }
+
+    #texto-a-encriptar, #respuesta {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .btns {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%; /* Botones ocupan el ancho completo en pantallas pequeñas */
+        max-width: none; /* Remueve el ancho máximo en pantallas pequeñas */
+    }
+
+    .copiar {
+        width: 100%; /* Botón de copiar ocupa el ancho completo */
+        max-width: none; /* Remueve el ancho máximo en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .info {
+        font-size: 0.8rem; /* Reduce el tamaño del texto en pantallas muy pequeñas */
+    }
+
+    .btns {
+        gap: 10px;
+    }
+}
